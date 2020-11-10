@@ -112,3 +112,5 @@ try {
 
 ## 系统运行截图
 
+![](https://github.com/Liu-shujun/JavaTest2020-11-9/blob/main/%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.PNG)
+
