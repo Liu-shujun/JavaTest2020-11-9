@@ -65,7 +65,7 @@ public interface Teacher {
 public String Name,Sex;//姓名，性别
 	public int Age;//年龄
 	float Salary,Tuition;//薪水，学费
-	public  Graduate(String Name,String Sex,int Age,int Salary,int Tuition){
+	public  Graduate(String Name,String Sex,int Age,float Salary,float Tuition){
 		this.Name=Name;
 		 
 		this.Sex=Sex;
@@ -109,3 +109,6 @@ try {
              System.out.println("输入顺序错误，请重新输入！");
          }
 ```
+
+## 系统运行截图
+
