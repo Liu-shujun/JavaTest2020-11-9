@@ -3,10 +3,10 @@ package Test;
 public class Graduate implements Student,Teacher {
 	
 
-	public String Name,Sex;//姓名，性别
-	public int Age;//年龄
-	float Salary,Tuition;//年龄，薪水，学费
-	public  Graduate(String Name,String Sex,int Age,int Salary,int Tuition){
+	public String Name,Sex;//濮撳悕锛屾�у埆
+	public int Age;//骞撮緞
+	float Salary,Tuition;//骞撮緞锛岃柂姘达紝瀛﹁垂
+	public  Graduate(String Name,String Sex,int Age,float Salary,float Tuition){
 		this.Name=Name;
 		 
 		this.Sex=Sex;
