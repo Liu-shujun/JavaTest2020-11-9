@@ -27,10 +27,85 @@
    
 2.编写研究生(Graduate)类
 
-     (1)实现了上述两个接口
+   (1)实现了上述两个接口
      
-     (2)属性：Name(姓名),Age(年龄),Sex(性别),Salary(薪水),Tuition(学费)
+   (2)属性：Name(姓名),Age(年龄),Sex(性别),Salary(薪水),Tuition(学费)
      
 3.编写测试(Test)类
+
+   (1)实例化三名博士研究生，通过Scanner类将研究生信息输入进去
    
-  
+   (2)通过Salsry()方法计算年薪；通过Tuition()方法计算年学费；通过Income()方法计算实际年收入
+   
+   (3)根据国家最新纳税标准设定纳税金额，设置一个Tax()方法,使用if-else语句计算纳税金额
+   
+   (4)使用try-catch语句做异常处理
+   
+## 核心代码
+代码一
+```
+public interface Student {
+	public abstract void payFee(float a);//缴纳学费
+	 
+	 public abstract float checkFee();//查学费
+
+}
+```
+代码二
+```
+public interface Teacher {
+	public abstract void sendPay(float a);//发放薪水
+	 
+	public abstract float checkPay();//查询薪水
+
+}
+```
+代码三
+```
+public String Name,Sex;//姓名，性别
+	public int Age;//年龄
+	float Salary,Tuition;//薪水，学费
+	public  Graduate(String Name,String Sex,int Age,int Salary,int Tuition){
+		this.Name=Name;
+		 
+		this.Sex=Sex;
+		 
+		this.Age=Age;
+		 
+		this.Salary=Salary;
+		 
+		this.Tuition=Tuition;
+
+	}
+```
+代码四
+```
+float Tax(float total){                     //年纳税
+    double y=0;
+    if(total<=taxStandard){
+        y=0;
+    }else if(total>taxStandard&&total<=8000){
+        y=total*0.03;
+    }else if(total>=8001&&total<=17000){
+        y=total*0.1;
+    }else if(total>=17001&&total<=30000){
+        y=total*0.2;
+    } else{
+        System.out.println("Too much income");
+    }
+   return (float) y;
+}
+```
+代码五
+```
+try {
+    		 ceshi.Target(a);
+             System.out.println("Next");
+             ceshi.Target(b);
+             System.out.println("Next");
+             ceshi.Target(c);
+    	 }
+         catch (Exception e){
+             System.out.println("输入顺序错误，请重新输入！");
+         }
+```
